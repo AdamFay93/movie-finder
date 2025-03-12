@@ -3,16 +3,19 @@ import { RouterOutlet } from '@angular/router';
 import { IOMBDResponse } from './ombdresponse';
 import { OmbdApiService } from './services/ombd-api.service';
 import { CommonModule } from '@angular/common';
+import { SearchtitleComponent } from './components/searchtitle/searchtitle.component';
+import { RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'movie-finder';
   movieData:IOMBDResponse | undefined;
-  errorMessage:any
+  errorMessage:any;
 
   constructor(private _ombdService:OmbdApiService){}
 
