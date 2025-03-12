@@ -25,6 +25,6 @@ export class OmbdApiService {
 
   private handleError(err:HttpErrorResponse){
     console.log("OMBDApiService:"+ err.message);
-    return throwError(()=> new Error("OMBDApiService:"+ err.message))
+    return throwError(()=> new Error("OMBDApiService:"+ err.message)) 
   }
 }
